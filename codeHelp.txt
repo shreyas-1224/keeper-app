@@ -1,0 +1,27 @@
+started with basic skeleton. commit 3554170b5010f42051615e065c8fc5105f05b596
+
+task : add hook in create Note area. 
+-> our note had two areas title and content. both needed to be set using useState hook. 
+
+   const [note , setNote] = useState({
+    title: "",                                              
+    content:""          // first see es6 destruring then this.
+  });
+
+  then, we added function onchange in input areas which will constantly trigger handleClick 
+  function if changed. there, we have set the current state of note using setNote.
+  now, why are we passing function to setNote instead of directly using setNote({
+    title : "new title",
+  });
+  if we do so, whatever in content will get set back to null or give error. thus, 
+  react state have a way to preserve previous values of state. to use that, we have passed
+  a function. (this is called spread operator in es6.)
+
+  setNote((prevValue)=>{
+            return({
+                title:value,                // inside if else. 
+                content:prevValue.content
+            });
+        });
+
+hereby, we have successfully added state in our input area.
