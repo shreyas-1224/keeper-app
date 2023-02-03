@@ -24,4 +24,16 @@ task : add hook in create Note area.
             });
         });
 
-hereby, we have successfully added state in our input area.
+hereby, we have successfully added state in our input area. (commit 37073c19362ad11f46678bd5bdc401227c372b20)
+
+_____________________________________________________________________________________________________________
+
+task : sent note to App component via button.
+-> for this, we passed a function handleClick via prop to CreateArea component. whenever this 
+   button is clicked, handleClick function from App is called. (make sure you call it from
+   arrow function else, it will be called at rendering time only.)
+   from the function, handleClick function is called and note is given as an argument.
+   the line event.preventDefault() is added to prevent form refreshing.
+
+
+
