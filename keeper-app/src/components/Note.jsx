@@ -5,9 +5,11 @@ function Note(props) {
   console.log("shreyas");
   return (
     <div className="note">
-      <h1>{props.title}</h1>
-      <p>{props.content}</p>
-      <button>DELETE</button>
+      <h1>{props.note.title}</h1>
+      <p>{props.note.content}</p>
+      <button onClick={()=>{
+        props.handleDelete(props.note);
+      }}>DELETE</button>
     </div>
   );
 }

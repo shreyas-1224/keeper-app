@@ -14,6 +14,9 @@ function App() {
     });
   }
 
+  function handleDelete(note){
+    setNotes(notes.filter((item) => item !== note));
+  }
   
   return (
     <div>
@@ -24,7 +27,7 @@ function App() {
       />
       {
         notes.map(function (note) {
-          return <Note key={note.title} title={note.title} content={note.content} />;
+          return <Note key={note.title} note={note} handleDelete={handleDelete}/>;
         })
       }
       

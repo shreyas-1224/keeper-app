@@ -51,6 +51,15 @@ now, renderd Note component using map function on notes array. using props.
 
 _____________________________________________________________________________________________________________
 
+task : implement delete note feature. 
+-> same as add button..
+just look at the use of filer function while deleting note from notes.
+function handleDelete(note){
+    setNotes(notes.filter((item) => item !== note));
+  }
 
+_____________________________________________________________________________________________________________
+
+Done!
 
 
