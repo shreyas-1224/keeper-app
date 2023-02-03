@@ -29,10 +29,17 @@ function CreateArea(props) {
   return (
     <div>
       <form>
-        <input onChange={handleChange} name="title" placeholder="Title" />
-        <textarea onChange={handleChange} name="content" placeholder="Take a note..." rows="3" />
+        <input onChange={handleChange} name="title" placeholder="Title" value={note.title}/>
+        <textarea onChange={handleChange} name="content" placeholder="Take a note..." value={note.content} rows="3" />
         <button onClick={(event)=>{
           props.handleClick(note);
+          setNote(()=>{
+            return({
+              title:"",
+              content:""
+            });
+          }
+          );
           event.preventDefault();
         }}>Add</button>
       </form>

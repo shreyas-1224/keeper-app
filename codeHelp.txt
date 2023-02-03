@@ -35,6 +35,22 @@ task : sent note to App component via button.
    from the function, handleClick function is called and note is given as an argument.
    the line event.preventDefault() is added to prevent form refreshing.
    
+_____________________________________________________________________________________________________________
+
+task : add notes to const notes array using state function.
+
+something about es6 spread operator: 
+
+const numbers = [1, 2, 3, 4];
+const newNumbers = [...numbers];
+
+console.log(newNumbers); // [1, 2, 3, 4] (... magic)
+
+inside , handleClick, updated the notes via setNotes.
+now, renderd Note component using map function on notes array. using props.
+
+_____________________________________________________________________________________________________________
+
 
 
 
