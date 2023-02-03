@@ -34,6 +34,7 @@ task : sent note to App component via button.
    arrow function else, it will be called at rendering time only.)
    from the function, handleClick function is called and note is given as an argument.
    the line event.preventDefault() is added to prevent form refreshing.
+   
 
 
 
